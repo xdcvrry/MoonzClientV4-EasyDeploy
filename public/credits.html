@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Credits - Moonz</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="styles.css" /> 
+<style>
+    /* Style for Quick Links */
+    .quick-links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        background-color: rgba(173, 216, 230, 0.8); /* Light blue with transparency */
+        color: #333; /* Dark text color */
+        padding: 20px;
+        width: 150px; /* Adjust width as needed */
+        z-index: 9999; /* Ensure it's above other elements */
+        border-left: 2px solid #fff; /* White border on the left */
+        border-radius: 20px; /* Round corners */
+    }
+
+    .quick-links a {
+        display: block;
+        color: #333; /* Dark text color */
+        text-decoration: none;
+        margin-bottom: 10px;
+        transition: all 0.3s ease; /* Smooth transition on hover */
+    }
+
+    .quick-links a:hover {
+        color: #fff; /* White text color on hover */
+        background-color: #333; /* Dark background color on hover */
+    }
+
+    .container {
+        position: relative;
+        z-index: 1; /* Ensure it's below the quick links bar */
+    }
+
+    /* Style for credits button */
+    .credits-button {
+        color: #333; /* Dark text color */
+        text-decoration: none;
+        margin-right: 10px;
+    }
+
+    .credits-button:hover {
+        color: #fff; /* White text color on hover */
+    }
+
+    /* Style for back arrow */
+    .back-arrow {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 24px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+<a href="index.html" class="back-arrow">
+    <i class="fas fa-arrow-left"></i>
+</a>
+<div class="background">
+    <div class="moving-gradient"></div>
+    <div class="moving-shapes" id="movingShapes"></div>
+</div>
+<div class="container">
+    <div class="title">
+        Credits
+    </div>
+    
+  
+    <br />
+    <div class="container">
+    
+</div>
+
+<!-- Portfolio - Owner & Developer -->
+<div class="portfolio">
+    <img src="https://i.pinimg.com/originals/cc/dd/73/ccdd739cbc7c1acc5a0f730dfd5ce4fc.jpg" alt="Xdcvrry">
+    <p>Owner &amp  Frontend Developer: xdcvrry</p>
+    <p>
+    Hello,
+<br>
+I'm xdcvrry, the owner of Moonz. I've been working with frontend coding languages like HTML, JavaScript, and CSS for quite some time now. Moonz started off as a small Google site for me and my friends, and it's been an incredible journey since then.
+<br>
+I've poured my heart and soul into Moonz, and it's been amazing to see it grow from a simple project to what it is today. I'm grateful for the opportunity to work on something I'm passionate about, and I'm excited to continue improving Moonz in the future.
+<br>
+Thanks for being part of this adventure!
+<br>
+Best regards,
+xdcvrry
+    </p>
+</div>
+<hr>
+<!-- Portfolio - JavaScript and Ultraviolet Backend Dev -->
+<div class="portfolio">
+    <img src="https://avatars.githubusercontent.com/u/144494583?v=4" alt="Crllect">
+    <p>JavaScript and Ultraviolet Backend Dev: <a href="github.com/crllect">Crllect</a></p>
+    <p>
+    i like computers and stuff. i also need copious amounts of caffeine to stay awake. i dabble in 3D art and music too.
+    </p>
+
+    <!-- Settings Icon -->
+    <a href="settings.html" class="icon-link">
+        <i class="fas fa-cog"></i>
+    </a>
+    
+    <!-- Home Icon -->
+    <a href="index.html" class="icon-link">
+        <i class="fas fa-home"></i>
+    </a>
+</div>
+
+</div>
+
+<script src="/uv/uv.bundle.js"></script>
+<script src="/uv/uv.config.js"></script>
+
+<script>
+    if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+            navigator.serviceWorker.register("/uv/sw.js", {
+                scope: __uv$config.prefix,
+            });
+        });
+    }
+
+    // Function to create moving shapes
+    function createShapes() {
+        var movingShapes = document.getElementById("movingShapes");
+        var numShapes = 12; // Number of shapes
+        var shapeSize = 20; // Size of each shape
+
+        for (var i = 0; i < numShapes; i++) {
+            var shape = document.createElement("div");
+            shape.className = "shape";
+            shape.style.top = Math.random() * 100 + "%";
+            shape.style.left = Math.random() * 100 + "%";
+            shape.style.width = shapeSize + "px";
+            shape.style.height = shapeSize + "px";
+            movingShapes.appendChild(shape);
+        }
+    }
+
+    // Function to fill search bar based on quick link clicked
+    function fillSearchBar(link) {
+        var searchBar = document.getElementById("urlInput");
+        if (link === 'google') {
+            searchBar.value = 'https://www.google.com';
+        } else if (link === 'nowggroblox') {
+            searchBar.value = 'https://gamenora.com/full/roblox';
+        }
+    }
+
+    createShapes(); // Create shapes when the page loads
+</script>
+</body>
+<script src="js/script.js"></script>
+</html>
