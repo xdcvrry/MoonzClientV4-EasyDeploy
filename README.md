@@ -33,4 +33,4 @@ We run off of ultraviolet by using an Ultraviolet Bare Server, therefore the bel
 ## Deploying
 You will need to deploy the public file for it to work, and if you need to edit it in something like vscode, you can use the vscode file attached. Remember to deploy the script.js and all of the uv files for it to work. It runs off the bare server of a site so change the bare server accordingly if the bare server is blocked
 
-If you want to see the entire codefiles use the [**MoonzClientV4-EasyDeploy**](https://github.com/xdcvrry/MoonzClient-V4)
+If you want to see the entire codefiles use the [**MoonzClientV4**](https://github.com/xdcvrry/MoonzClient-V4)
